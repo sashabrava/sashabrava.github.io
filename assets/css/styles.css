@@ -1,6 +1,7 @@
 body {
   font-family: Arial;
-  font-size: 15px;
+  font-size: 16px;
+  line-height: 1.5;
   color: #000;
   background: #f2f3e7 url(/assets/img/background.png) repeat;
 }
@@ -12,4 +13,33 @@ p {
 a {
   font-weight: bold;
   color: #092cf0;
+}
+
+.content {
+  padding: 20px;
+  margin-right: auto;
+  margin-left: auto;
+  max-width: 700px;
+}
+
+#main_content{
+  padding-bottom: 20px;
+}
+
+footer {
+  border-top: 2px solid #f85a2799;
+  padding: 20px;
+}
+
+header{
+  border-bottom: 2px solid #f85a2799;
+  padding: 20px;
+}
+
+.right{
+float: right;
+}
+img{
+    width:100%;
+    max-width:650px;
 }
