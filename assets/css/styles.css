@@ -1,0 +1,15 @@
+body {
+  font-family: Arial;
+  font-size: 15px;
+  color: #000;
+  background: #f2f3e7 url(/assets/img/background.png) repeat;
+}
+
+p {
+  color: #333030;
+}
+
+a {
+  font-weight: bold;
+  color: #092cf0;
+}
