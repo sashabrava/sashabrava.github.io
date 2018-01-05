@@ -8,6 +8,7 @@ body {
 
 p {
   color: #333030;
+  text-align: justify;
 }
 
 a {
@@ -37,9 +38,10 @@ header{
 }
 
 .right{
-float: right;
+  float: right;
 }
+
 img{
-    width:100%;
-    max-width:650px;
+  max-width:100%;
+  height:auto;
 }
