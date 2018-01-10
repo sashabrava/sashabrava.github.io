@@ -1,0 +1,37 @@
+<html>
+	<head>
+		<title>{% if page.title and site.title %}{{ page.title }} - {{site.title}}{% else %}  {% endif %}</title>
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+		<link rel="stylesheet" type="text/css" href="{{ '/assets/css/styles.css' | relative_url }}">
+	</head>
+	<body>
+		<div class="content"> 
+			{% include header.html %}
+	       			<h1>{{ page.title }}</h1>
+          			<h2>{{ page.description}}</h2>
+				<section id="main_content">
+          				{{ content }}
+				</section>
+			<script>
+				var idcomments_acct = '58a3cd6f9085b275522f0e743e009439';
+				var idcomments_post_id = "{{ site.url }}{{ page.url }}";
+				var idcomments_post_url = "{{ site.url }}{{ page.url }}";
+			</script>
+
+		<span id="IDCommentsPostTitle" style="display:none"></span>
+		<script type='text/javascript' src='https://www.intensedebate.com/js/genericCommentWrapperV2.js'></script>
+ 			{% include footer.html %}
+		</div>
+		<script>
+  			(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  			(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  			m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  			})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+  			ga('create', '{{ site.google_analytics }}', 'auto');
+  			ga('send', 'pageview');
+		</script>
+
+	</body>
+</html>

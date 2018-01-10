@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: article
 title:  "Making Jekyll available on local network"
 date:   2018-01-05 16:53:00
 categories: firstpost

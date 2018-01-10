@@ -3,7 +3,7 @@ body {
   font-size: 16px;
   line-height: 1.5;
   color: #000;
-  background: #f2f3e7 url(/assets/img/background.png) repeat;
+  background: #fff url(/assets/img/background.png) repeat 0 0 fixed;
 }
 
 p {
@@ -15,7 +15,6 @@ a {
   font-weight: bold;
   color: #092cf0;
 }
-
 .content {
   padding: 20px;
   margin-right: auto;
@@ -44,4 +43,25 @@ header{
 img{
   max-width:100%;
   height:auto;
+}
+
+button.header{
+ background-color: #4CAF50;
+ border: 2px solid #4CAF50;
+ color: white;
+ padding: 6px 20px;
+border-radius: 15%;
+transition-duration: 0.4s;
+}
+button.footer{
+ background-color: #6495ED;
+ border: 2px solid #6495ED;
+ color: white;
+ padding: 6px 20px;
+border-radius: 15%;
+transition-duration: 0.4s;
+}
+button.header:hover,button.footer:hover {
+    background-color: white; 
+    color: #4CAF50;/* Green */
 }
