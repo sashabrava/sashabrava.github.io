@@ -1,9 +1,14 @@
 <html>
 	<head>
  		<meta charset="utf-8">
-		<meta name="robots" content="index, follow">
+		<meta name="googlebot" content="all">
+		<meta name="robots" content="all">
 		<title>{% if page.title and site.title %}{{ page.title }} - {{site.title}}{% else %}  {% endif %}</title>
-		<meta name="description" content="{{page.description}}">
+		<meta content="article" property="og:type" />
+		<meta content="{{ site.url }}{{page.url}}" property="og:url">
+		<meta content="{{page.title}}" property="og:title">
+		<meta content="{{site.title}}" property="og:site_name">
+		<meta content="{{page.description}}" property="og:description">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<link rel="stylesheet" type="text/css" href="{{ '/assets/css/styles.css' | relative_url }}">
 	</head>
