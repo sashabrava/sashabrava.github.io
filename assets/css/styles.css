@@ -1,9 +1,16 @@
+html, body {
+    margin: 0;
+    height: 100%;
+}
+
+
+
 body {
   font-family: Arial;
   font-size: 16px;
   line-height: 1.5;
   color: #000;
-  background: #fff url(/assets/img/background.png) repeat 0 0 fixed;
+ background: linear-gradient(to right, rgb(240,255,250),rgb(250,255,240), rgb(255,240,250));
 }
 
 p {
@@ -16,10 +23,17 @@ a {
   color: #092cf0;
 }
 .content {
-  padding: 20px;
+  padding-top: 20px;
+  padding-bottom: 20px;
   margin-right: auto;
   margin-left: auto;
   max-width: 700px;
+}
+.article{
+background: rgba(122,122,122,0.15);
+  padding-left: 10px;
+  padding-right: 10px;
+  padding-top: 1px;
 }
 
 #main_content{
@@ -64,4 +78,8 @@ transition-duration: 0.4s;
 button.header:hover,button.footer:hover {
     background-color: white; 
     color: #4CAF50;/* Green */
+}
+.highlighter-rouge{
+background-color: #fed7d7;
+border-radius: 5px;
 }

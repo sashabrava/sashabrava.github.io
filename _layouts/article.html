@@ -9,19 +9,19 @@
 	<body>
 		<div class="content"> 
 			{% include header.html %}
+				<section id="main_content" class ="article">
 	       			<h1>{{ page.title }}</h1>
           			<h2>{{ page.description}}</h2>
-				<section id="main_content">
           				{{ content }}
-				</section>
+				
 			<script>
 				var idcomments_acct = '58a3cd6f9085b275522f0e743e009439';
 				var idcomments_post_id = "{{ site.url }}{{ page.url }}";
 				var idcomments_post_url = "{{ site.url }}{{ page.url }}";
 			</script>
-
-		<span id="IDCommentsPostTitle" style="display:none"></span>
-		<script type='text/javascript' src='https://www.intensedebate.com/js/genericCommentWrapperV2.js'></script>
+			<script type='text/javascript' src='https://www.intensedebate.com/js/genericCommentWrapperV2.js'></script>
+			<span id="IDCommentsPostTitle" style="display:none"></span>
+				</section>
  			{% include footer.html %}
 		</div>
 		<script>
