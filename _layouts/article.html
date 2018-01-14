@@ -1,9 +1,10 @@
 <html>
 	<head>
+ 		<meta charset="utf-8">
+		<meta name="robots" content="index, follow">
 		<title>{% if page.title and site.title %}{{ page.title }} - {{site.title}}{% else %}  {% endif %}</title>
-
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-
+		<meta name="description" content="{{page.description}}">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<link rel="stylesheet" type="text/css" href="{{ '/assets/css/styles.css' | relative_url }}">
 	</head>
 	<body>
@@ -11,7 +12,6 @@
 			{% include header.html %}
 				<section id="main_content" class ="article">
 	       			<h1>{{ page.title }}</h1>
-          			<h2>{{ page.description}}</h2>
           				{{ content }}
 				
 			<script>

@@ -2,7 +2,8 @@
 layout: article
 title:  "Making Jekyll available on local network"
 date:   2018-01-05 16:53:00
-categories: firstpost
+categories: Jekyll
+description: "While testing my GitHub Pages website I found out, that isn't mobile friendly. Therefore I took some steps to make it available for me to test the offline version from mobile device through the network. "
 ---
 After finding out that my Jekyll blog isn't mobile friendly, I decided to fix its styling and check it on real Android device (since the view from "Responsive Design Mode" button of Mozilla Firefox differed from the view on Android Chrome app). The easiest way for testing is to connect both server and Android device to the same network and connect to server from device by IP address.
 `ip route get 8.8.8.8 | awk '{print $NF; exit}'`

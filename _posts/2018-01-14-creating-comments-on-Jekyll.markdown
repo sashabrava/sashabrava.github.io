@@ -3,6 +3,7 @@ layout: article
 title:  "Creating comments on Jekyll"
 date:   2018-01-14 10:00:00
 categories: Jekyll
+description: "There are different ways to add comments to your static website, there are different wesites providing such services. You can see a comparison of some popular tools, found on web, which can help you to complete the task of adding comments section."
 ---
 
 As a matter of experiment (and to create a possibility for visitors to write feedback more convenient than sending me an e-mail), I started to think about adding comments section on Jekyll website. As for now, there are at least 3 alternatives on the web.
