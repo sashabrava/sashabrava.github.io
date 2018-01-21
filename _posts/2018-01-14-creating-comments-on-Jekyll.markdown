@@ -8,21 +8,21 @@ description: "There are different ways to add comments to your static website, t
 
 As a matter of experiment (and to create a possibility for visitors to write feedback more convenient than sending me an e-mail), I started to think about adding comments section on Jekyll website. As for now, there are at least 3 alternatives on the web.
 
-1.  [GitHub Comments](https://github.com/wireddown/ghpages-ghcomments)
+1.  [GitHub Comments](https://github.com/wireddown/ghpages-ghcomments){:target="_blank"}
 
     The idea of project is quite good, although I found it not so comfortable for users not to get a possibility to leave comment without logging in and using GitHub as the only option to log in.
 
     ![GitHub Comments]({{ site.url }}/assets/img/2018-01-14-creating-comments-on-jekyll/github-comments.png) 
 
 
-2.  [Disqus](https://disqus.com/)
+2.  [Disqus](https://disqus.com/){:target="_blank"}
 
     That's one of the most popular comments tool for static pages websites. But Disqus offering ads without an option of turning them off made me thinking about another tool since I plan my website as free and open-source.
 
     ![Disqus adverts agreement]({{ site.url }}/assets/img/2018-01-14-creating-comments-on-jekyll/disqus.png)
 
 
-3.  [Intensedebate](https://intensedebate.com/)
+3.  [Intensedebate](https://intensedebate.com/){:target="_blank"}
 
     That's not so famous tool as Disqus, but a free one. It offers creating a comments section by adding a JS script (so all the data is stored on their website). It also offers commenting as a guest, managing comments from admin panel and notifying about new comments. 
     Their homepage looks like that.
