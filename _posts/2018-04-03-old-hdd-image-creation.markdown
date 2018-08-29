@@ -2,7 +2,7 @@
 layout: article
 title:  "Safe migration from Windows XP to Linux Lite"
 date:   2018-04-03 18:20:00
-categories: Linux Lite
+categories: [Linux Lite]
 description: "There is a plenty of old PC in the storerooms. However, such devices still may have a second life - although they aren't powerful enough to support modern Linux and Windows distributions."
 ---
 There is a plenty of old PC in the storerooms. However, such devices still may have a second life - although they aren't powerful enough to support modern Linux and Windows distributions. However, there are lightweight Linux distributions, which work well on old machines and at the same time contain latest updates.

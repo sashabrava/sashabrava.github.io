@@ -6,7 +6,7 @@ description: Welcome to @sashabrava blog
   <ul class="post-list">
     {% for post in site.posts %}
 	<li>
-          <a href="{{ post.url}}">{{ post.title }}</a>
+          <a href="{{ post.url}}"><p class="title">{{ post.title }}</p><p class="date">{{post.date | date_to_long_string}}, category - {{ post.categories}}</p></a>
         </li>
     {% endfor %}
   </ul>

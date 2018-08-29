@@ -15,16 +15,18 @@
 		<meta content="{{ site.url }}/favicon.ico" property="og:image"  />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<link rel="stylesheet" type="text/css" href="{{ '/assets/css/styles.css' | relative_url }}">
+		<link href="https://fonts.googleapis.com/css?family=Ubuntu" rel="stylesheet">
 	</head>
 	<body>
 		<div class="content"> 
 			{% include header.html %}
-	       			<h1>{{ page.title }}</h1>
-          			<h2>{{ page.description}}</h2>
-				<section id="main_content">
-          				{{ content }}
-				</section>
-
+				<div class="workfield">
+	       				<h1>{{ page.title }}</h1>
+          				<h2>{{ page.description}}</h2>
+					<section id="main_content">
+          					{{ content }}
+					</section>
+				</div>
  			{% include footer.html %}
 		</div>
 		<script>

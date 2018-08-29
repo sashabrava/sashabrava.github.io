@@ -1,12 +1,19 @@
-html, body {
+body {
     margin: 0;
     height: 100%;
 }
-
+.workfield{
+    padding-left:10px;
+    padding-right:10px;
+}
+@font-face{
+font-family: Ubuntu;
+src:url("https://fonts.googleapis.com/css?family=Ubuntu" rel="stylesheet");
+}
 
 
 body {
-  font-family: Arial;
+  font-family: Ubuntu,Arial;
   font-size: 16px;
   line-height: 1.5;
   color: #000;
@@ -17,10 +24,22 @@ p {
   color: #333030;
   text-align: justify;
 }
-
-a {
+li{
+margin-top:10px;
+}
+li>a{
+display: table;
+}
+a>p.title {
   font-weight: bold;
   color: #092cf0;
+margin-bottom:0px;
+
+}
+a>p.date{
+font-size: 12px;
+margin:0px;
+font-style:italic;
 }
 .content {
   padding-top: 20px;
@@ -61,6 +80,7 @@ max-height:400px;
 }
 
 button.header{
+font-family: Ubuntu,Arial;
  background-color: #4CAF50;
  border: 2px solid #4CAF50;
  color: white;
