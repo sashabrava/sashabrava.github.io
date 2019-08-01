@@ -101,6 +101,8 @@ button.header:hover,button.footer:hover {
     color: #4CAF50;/* Green */
 }
 .highlighter-rouge{
-background-color: #fed7d7;
+background-color: #dbd7fe;
 border-radius: 5px;
+white-space: pre-wrap;
+display: inline-block;
 }
