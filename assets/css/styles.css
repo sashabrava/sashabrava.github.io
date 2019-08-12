@@ -107,3 +107,8 @@ white-space: pre-wrap;
 display: inline-block;
 vertical-align: bottom;
 }
+
+/*  fixing multiline code for github pages */
+div.highlighter-rouge > div.highlight > pre.highlight {
+white-space: pre-wrap;
+}
