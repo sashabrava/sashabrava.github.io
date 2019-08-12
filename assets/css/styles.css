@@ -104,5 +104,6 @@ button.header:hover,button.footer:hover {
 background-color: #dbd7fe;
 border-radius: 5px;
 white-space: pre-wrap;
-display: inline-block;
+display: block;
+overflow:auto;
 }
