@@ -19,11 +19,11 @@ and start an app via
 `python manage.py startapp polls`.
 
 After that we need to add the line `'polls.apps.PollsConfig',` into `INSTALLED_APPS` array of `settings.py`. 
-Then define variable `CELERY_RESULT_BACKEND = "rpc"` for `celery_travis_integration/celery_travis_integration/settings.py`.
+Then define variable `CELERY_RESULT_BACKEND = "rpc"` for `celery_travis_integration/ celery_travis_integration/ settings.py`.
 
 Let's define files necessary for Celery to run.
 
-Firstly we need to define Celery instance and add first test method in `celery_travis_integration/celery_travis_integration/celery.py`:
+Firstly we need to define Celery instance and add first test method in `celery_travis_integration/ celery_travis_integration/ celery.py`:
 
 ```
 from __future__ import absolute_import, unicode_literals
@@ -39,7 +39,7 @@ def debug_task(self):
     return "Debug_task completed"
 ```
 
-Secondly we need to ensure that our app is imported into Celery `celery_travis_integration/celery_travis_integration/__init.py__`:
+Secondly we need to ensure that our app is imported into Celery `celery_travis_integration/ celery_travis_integration/ __init.py__`:
 
 ```
 from __future__ import absolute_import, unicode_literals
@@ -56,7 +56,7 @@ def debug_task2(self):
     return "Debug_task2 completed"
 ```
 
-Fourth task is to add tests into `celery_travis_integration/tests.py`. Test will fail if connection to Celery is missing.
+Fourth task is to add tests into `celery_travis_integration/ tests.py`. Test will fail if connection to Celery is missing.
 
 ```
 from .celery import debug_task
