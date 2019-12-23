@@ -3,7 +3,7 @@ layout: article
 title:  "Uploading OpenStreetCam images from Windows using Linux Mint Live over VirtualBox"
 date:  2019-12-23 21:09:00 +0100
 categories: [linux, openstreetcam, images]
-description: "The guide how to use upload images to Openstreetcam using VirtualBox Linux Mint LiveISO."
+description: "The guide how to upload images to Openstreetcam using VirtualBox Linux Mint LiveISO."
 ---
 <a target="_blank" href="https://openstreetcam.org/">OpenStreetCam</a> is a platform for viewing and uploading street view images. 
 It's an open-source alternative of <a target="_blank" href="https://mapillary.com/">Mapillary</a> service. 
@@ -52,6 +52,7 @@ Before running commands it makes sense to check if we have a network access to p
 `mkdir osc` will create a new directory. 
 
 `sudo mount -t cifs -o user=USERNAME,file_mode=0777,dir_mode=0777 //192.168.xx.xx/osc ~/osc/` is the main command for network folder mount. Your should insert your own USERNAME and IP address to get access to files. `0777` in this command grants full read-write access to the folder. If command completed successfully, you can see your shared files in "osc" folder (can be accessed via "osc" shortcut on the desktop).
+
 ![OSC folder]({{ site.url }}/assets/img/2019-12-23-openstreetcam-virtualbox-upload/osc-folder.png)
 
 Now we can install necessary software. Firstly we should update package lists via  `sudo apt update`. Script will be taken from GitHub, that's why we need to install git via `sudo apt install git`. 
@@ -59,6 +60,7 @@ Now we can install necessary software. Firstly we should update package lists vi
 Next step is configuring Python environment.
 `python -V` shows that we have old Python2 installed.
 `python3 -V` shows us correct version for script launch. As for the scripts on commit `896b44c`, the script doesn't run on Python 3.8.0, but version 3.6.8 satisfies its requirements.
+
 ![Python on Linux]({{ site.url }}/assets/img/2019-12-23-openstreetcam-virtualbox-upload/python.png)
 
 All the necessary Python packages can be installed directly into system, however, I'll use a virtual environment for that because scripts require certain packages versions to run:
