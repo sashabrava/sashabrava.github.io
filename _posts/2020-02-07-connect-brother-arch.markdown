@@ -1,6 +1,6 @@
 ---
 layout: article
-title:  "Connecting Brother MFP to Arch Linux via CUPS"
+title:  "Connecting Brother DCP-B7520DW MFP to Arch Linux via WiFi"
 date:  2020-02-07 10:40:00 +0100
 categories: [linux, arch, MFP]
 description: "Guide how to connect Brother DCP-B7520DW MFP to Arch Linux"
