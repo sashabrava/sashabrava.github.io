@@ -1,6 +1,6 @@
 ---
 layout: article
-title:  "Installing Arch Linux with GUI"
+title:  "Installing Arch Linux with GUI on GPT disks"
 date:  2020-01-04 15:05:00 +0100
 categories: [linux, arch]
 description: "Guide how to install Arch Linux with GUI."
