@@ -1,0 +1,60 @@
+---
+layout: article
+title:  "GIMP multiple image processing"
+date:  2020-02-20 11:08:00 +0100
+categories: [GIMP]
+description: "Guide how to write scripts for GIMP"
+---
+It's relatively easy to imagine a situation, when a hundred or more images need to have the same effect applied. Photo time-lapse, which needs 'cut' or 'brighten' operation is an example. For such tasks GIMP has opportunities for scripting and launching the application in command-line mode.
+
+The idea is based on writing .scm script and placing it into necessary folder. GIMP scripts folder can be found in Edit -> Preferences -> Folders.
+
+![GIMP preferences]({{ site.url }}/assets/img/2020-02-20-gimp/gimp-preferences.png)
+
+<a target="_blank" href="https://www.gimp.org/tutorials/Basic_Batch/">Official tutorial</a> offers an example of script for unsharp masking. The script described below in this article can be downloaded
+<a  href="{{ site.url }}/assets/img/2020-02-20-gimp/1_distortion.scm">here</a>. 
+
+Popular language for writing scripts is <a target="_blank" href="https://docs.gimp.org/en/gimp-concepts-script-fu.html">Script-Fu</a>. It's syntax is based on defining functions using `define`, declaring variables via `let*` and running functions via `(function1 param1 param2)`.
+
+`(define (script-correct-distortion filename distortion-main distortion-edge)` defines a function script-correct-distortion with parameters filename, distortion-main and distortion-edge.
+
+`(let* ((image-file (car (gimp-file-load RUN-NONINTERACTIVE filename filename)))` declares variable `image-file` as the file for processing.
+
+`(image-layer (car (gimp-image-get-active-layer image-file))))`  declares variable `image-layer` as the active layer of image. 
+
+`(plug-in-lens-distortion RUN-NONINTERACTIVE image-file image-layer 0 0 distortion-main distortion-edge 0 0)` runs necessary effect over the image. Additional info about callable functions and their paramaters can be found on Help -> Procedure Browser page.
+
+![GIMP procedures]({{ site.url }}/assets/img/2020-02-20-gimp/gimp-procedures.png)
+
+`(gimp-file-save RUN-NONINTERACTIVE image-file image-layer filename filename)` saves file.
+
+`(gimp-image-delete image-file)))` deletes file from GIMP.
+
+`gimp -i -b '(script-correct-distortion "image.jpg" -10 -2)' -b '(gimp-quit 0)'` command launched in Linux terminal (or Windows CMD) starts the script and closes command-line GIMP after processing is over.
+
+The script is able to process one file, but it's possible to process multiple files via file mask.
+
+`(define (script-correct-distortion-multiple file-pattern distortion-main distortion-edge)` defines function.
+
+`(let* ((file-list (cadr (file-glob file-pattern 1))))` declares `file-list` valiable, which is assigned as a list of matching filenames. 
+
+`(while (not (null? file-list))` start while loop
+
+ `(let* ((file-name (car file-list))` declares `file-name` as the first element of `file-list`.
+
+ `(image-file (car (gimp-file-load RUN-NONINTERACTIVE file-name file-name)))` declares and assigns `image-file` as a file for processing.
+
+ `(image-layer (car (gimp-image-get-active-layer image-file))))` declares and assigns active layer.
+
+ `(plug-in-lens-distortion RUN-NONINTERACTIVE image-file image-layer 0 0 distortion-main distortion-edge 0 0)` runs necessary script over the image.
+
+ `(gimp-file-save RUN-NONINTERACTIVE image-file image-layer file-name file-name)` saves image.
+
+`(gimp-image-delete image-file))` removes image from GIMP.
+
+`(set! file-list (cdr file-list)))))` removes current image from the list to prevent infinite loop.
+
+`gimp -i -b '(script-correct-distortion-multiple "*.JPG" -10 -2)' -b '(gimp-quit 0)'` command launched in Linux terminal (or Windows CMD) starts the script and closes command-line GIMP after processing is over. 
+
+
+
