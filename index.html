@@ -3,16 +3,14 @@ layout: default
 title: Home page
 description: Welcome to @sashabrava blog
 ---
-  <ul class="post-list">
+  <ul class="post-list pl-0">
     {% for post in site.posts %}
-	<li>
+	<li class="list-group-item">
           <a href="{{ post.url}}">
-		<p class="title">{{ post.title }}</p><p class="date">{{post.date | date_to_long_string}}, categories - 
+		<p class="title">{{ post.title }}</p><p class="date">{{post.date | date_to_long_string}}, categories -
 			{% for category in post.categories %} {{ category}}{% if forloop.last == false %}, {% endif %}{% endfor %}
 		</p>
 	</a>
         </li>
     {% endfor %}
   </ul>
-
-

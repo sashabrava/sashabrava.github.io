@@ -17,14 +17,15 @@ body {
   font-size: 16px;
   line-height: 1.5;
   color: #000;
- background: linear-gradient(to right, rgb(240,255,250),rgb(250,255,240), rgb(255,240,250));
+
+ background: linear-gradient(to right, rgb(221, 221, 221),rgb(255, 255, 255), rgb(221,221,221));
 }
 
 p {
   color: #333030;
   text-align: justify;
 }
-li{
+.workfield li{
 margin-top:10px;
 }
 li>a{
@@ -59,15 +60,6 @@ background: rgba(122,122,122,0.15);
   padding-bottom: 20px;
 }
 
-footer {
-  border-top: 2px solid #f85a2799;
-  padding: 20px;
-}
-
-header{
-  border-bottom: 2px solid #f85a2799;
-  padding: 20px;
-}
 
 .right{
   float: right;
@@ -79,29 +71,8 @@ max-height:400px;
   height:auto;
 }
 
-button.header{
-font-family: Ubuntu,Arial;
- background-color: #4CAF50;
- border: 2px solid #4CAF50;
- color: white;
- padding: 6px 20px;
-border-radius: 15%;
-transition-duration: 0.4s;
-}
-button.footer{
- background-color: #6495ED;
- border: 2px solid #6495ED;
- color: white;
- padding: 6px 20px;
-border-radius: 15%;
-transition-duration: 0.4s;
-}
-button.header:hover,button.footer:hover {
-    background-color: white; 
-    color: #4CAF50;/* Green */
-}
 .highlighter-rouge{
-background-color: #dbd7fe;
+background-color: #a7a5bf8c;
 border-radius: 5px;
 white-space: pre-wrap;
 display: inline-block;
